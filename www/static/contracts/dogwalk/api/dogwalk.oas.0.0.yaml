@@ -1,0 +1,514 @@
+openapi: 3.0.0
+info:
+  title: Dog Walk API
+  version: 0.0.1
+  description: API for managing dog walks and related activities.
+
+servers:
+  - url: https://api.dogwalk.com/v1
+
+paths:
+  /dogs:
+    get:
+      summary: List all registered dogs
+      responses:
+        '200':
+          description: A list of all registered dogs
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Dog'
+                  meta:
+                    type: object
+                  errors:
+                    type: array
+                    items:
+                      type: string
+    post:
+      summary: Register a new dog
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Dog'
+      responses:
+        '201':
+          description: Dog registered successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Dog'
+                  meta:
+                    type: object
+                  errors:
+                    type: array
+                    items:
+                      type: string
+
+  /dogs/{dogId}:
+    get:
+      summary: Get details of a registered dog
+      parameters:
+        - name: dogId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Details of the registered dog
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Dog'
+                  meta:
+                    type: object
+                  errors:
+                    type: array
+                    items:
+                      type: string
+    put:
+      summary: Amend details of a registered dog
+      parameters:
+        - name: dogId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Dog'
+      responses:
+        '200':
+          description: Dog details updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Dog'
+                  meta:
+                    type: object
+                  errors:
+                    type: array
+                    items:
+                      type: string
+    delete:
+      summary: Deregister a dog
+      parameters:
+        - name: dogId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Dog deregistered successfully
+
+  /dogs/{dogId}/images:
+    post:
+      summary: Upload images of a dog
+      parameters:
+        - name: dogId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                images:
+                  type: array
+                  items:
+                    type: string
+                    format: binary
+      responses:
+        '201':
+          description: Images uploaded successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: string
+                  meta:
+                    type: object
+                  errors:
+                    type: array
+                    items:
+                      type: string
+    get:
+      summary: View images of a dog
+      parameters:
+        - name: dogId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of images of the dog
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: string
+                  meta:
+                    type: object
+                  errors:
+                    type: array
+                    items:
+                      type: string
+    delete:
+      summary: Remove images of a dog
+      parameters:
+        - name: dogId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                images:
+                  type: array
+                  items:
+                    type: string
+      responses:
+        '204':
+          description: Images removed successfully
+
+  /dogs/{dogId}/walks:
+    post:
+      summary: Schedule a walk for a dog
+      parameters:
+        - name: dogId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Walk'
+      responses:
+        '201':
+          description: Walk scheduled successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Walk'
+                  meta:
+                    type: object
+                  errors:
+                    type: array
+                    items:
+                      type: string
+
+  /dogs/{dogId}/walks/{walkId}:
+    get:
+      summary: Get details of a scheduled walk
+      parameters:
+        - name: dogId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: walkId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Details of the scheduled walk
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Walk'
+                  meta:
+                    type: object
+                  errors:
+                    type: array
+                    items:
+                      type: string
+    put:
+      summary: Reschedule a walk
+      parameters:
+        - name: dogId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: walkId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Walk'
+      responses:
+        '200':
+          description: Walk rescheduled successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Walk'
+                  meta:
+                    type: object
+                  errors:
+                    type: array
+                    items:
+                      type: string
+    delete:
+      summary: Unschedule a walk
+      parameters:
+        - name: dogId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: walkId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Walk unscheduled successfully
+
+  /dogs/{dogId}/walks/{walkId}/complete:
+    post:
+      summary: Record a walk as completed
+      parameters:
+        - name: dogId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: walkId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Walk recorded as completed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/Walk'
+                  meta:
+                    type: object
+                  errors:
+                    type: array
+                    items:
+                      type: string
+
+  /dogs/{dogId}/walks/{walkId}/images:
+    post:
+      summary: Upload images of a walk
+      parameters:
+        - name: dogId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: walkId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                images:
+                  type: array
+                  items:
+                    type: string
+                    format: binary
+      responses:
+        '201':
+          description: Images uploaded successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: string
+                  meta:
+                    type: object
+                  errors:
+                    type: array
+                    items:
+                      type: string
+    get:
+      summary: View images of a walk
+      parameters:
+        - name: dogId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: walkId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of images of the walk
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: string
+                  meta:
+                    type: object
+                  errors:
+                    type: array
+                    items:
+                      type: string
+    delete:
+      summary: Remove images of a walk
+      parameters:
+        - name: dogId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: walkId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                images:
+                  type: array
+                  items:
+                    type: string
+      responses:
+        '204':
+          description: Images removed successfully
+
+  /walks:
+    get:
+      summary: List all scheduled dog walks
+      responses:
+        '200':
+          description: A list of all scheduled dog walks
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Walk'
+                  meta:
+                    type: object
+                  errors:
+                    type: array
+                    items:
+                      type: string
+
+components:
+  schemas:
+    Dog:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        breed:
+          type: string
+        images:
+          type: array
+          items:
+            type: string
+
+    Walk:
+      type: object
+      properties:
+        id:
+          type: string
+        dogId:
+          type: string
+        scheduledAt:
+          type: string
+          format: date-time
+        completedAt:
+          type: string
+          format: date-time
+        images:
+          type: array
+          items:
+            type: string
