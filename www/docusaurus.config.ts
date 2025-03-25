@@ -143,9 +143,24 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
     prism: {
+      //  additionalLanguages: [
+      //    "csharp",
+      //  ],
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    // languageTabs: [
+    //   {
+    //     highlight: "python",
+    //     language: "python",
+    //     logoClass: "python",
+    //   },
+    //   {
+    //     highlight: "csharp",
+    //     language: "csharp",
+    //     logoClass: "csharp",
+    //   }
+    // ],
   } satisfies Preset.ThemeConfig,
 
   plugins: [
