@@ -1,0 +1,71 @@
+---
+id: remove-images-of-a-dog
+title: "Remove images of a dog"
+description: "Remove images of a dog"
+sidebar_label: "Remove images of a dog"
+hide_title: true
+hide_table_of_contents: true
+api: eJx1U01v2zAM/SsCTxugxemwk29dm0OAHYqgww5BDozF2Gr0VUl2ahj+7wPtNF2bThfL0iP1+Pg4QMCIljLFBOV2AIeWoATl67UCCdpBCQFzAxIiPbc6koIyx5YkpKohi1AOkPvAQSlH7WoYx90MppR/etUz4mNs5V0ml/kKQzC6wqy9K56Sd3x2ldrvn6jKICFEHyhmTYlvtcV63p1xGCP2zDuTTZ9RmxbTS8G7NMd+X/7gj6JURR2YCJSwnlKLSNZ3pERqq4pSOrTG9MAZ3qM3E0zMfIQ/CBTK1yDBUm68YkXJUCaugNUsoVC+TsUwCT0W50IkJIrday/aaKCEJueQyqLAoBfK1yc0x0XlbdHdAAvNkm3exF69oA2G/hVn+1r9buSGHvyki86Mgntfiz9ojuL2YQ0S+O25ouViubiBj3XePqzFwUdh0WGtXc1VCqaUBDolIhnMpARWWXeau7SAUULwKVucOnv213/1evfcpX2ZXnIRDGrH6SZdhrOQW/YqK1dePDvXvZPQ+JQZMQx7TPQ7mnHk4+eWYg/ldiehw6hxz0psB1A68V5BeUCT6IrMxbTwZXP281cB8nOSr4Z0bMcOTct/IOFI/WW+Ru5IQ6goTgTmu7v5mW+PnOEt9mpOuPsXe92vfq0eVyBhf5446xVHRTzx6OJpft1PxUyun84GMOjqFmvGzll5/QXBbGR2
+sidebar_class_name: "delete api-method"
+info_path: docs/dogwalk/api/v1/dog-walk-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove images of a dog"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/dogs/{dogId}/images"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Remove images of a dog
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"dogId","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"images":{"type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"204":{"description":"Images removed successfully"}}}
+>
+  
+</StatusCodes>
+
+
+      

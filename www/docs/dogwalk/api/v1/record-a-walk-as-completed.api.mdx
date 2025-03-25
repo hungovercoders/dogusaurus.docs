@@ -1,0 +1,71 @@
+---
+id: record-a-walk-as-completed
+title: "Record a walk as completed"
+description: "Record a walk as completed"
+sidebar_label: "Record a walk as completed"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VE2P00AM/SuRTyANTZdjbpW47IlqAXGoenAzbjLbTGbW4xSqKP8dOU0jaCu0KyRySTKe54/nZ/cQkdGTECcoNj206AkKsKF6tGDAtVBARKnBANNL55gsFMIdGUhlTR6h6EFOUUFJ2LUVDIOZ/fzA5vAPjrZ6OcXQJkpq/7hc6stSKtlFcUG9fsfmkDGVgS3ZDFNWBh8bEtK4ZWiFWlEUxti4EhWVPyeF9rehw+6ZSgEDkUMkFncObFFeccvZO0WYicx7Fg1vu4bsSm7tBvaBPYq2A4U+iPOkoLm8t4Ccx+qc5HQfmfGkjRHy6R73gwFx0tDEsDrxdI+FwQAxB36b9/ExV618GruYYaa6uW6lJ6mDVRmFNHKvaiogt6FKeT+SPOQKTHl/1t2QX/BgIBEfLyrvuIECapGYijzH6BY2VIpZlMHnxwdQ5bl2H8bUJxY+hSobtbZaP4IBdXbOerlYLh7gupbV+jHbB848tli5tspsqMa6UoatzZgaFNVrKe7oVEELZVJr8zhqcxqhv3LyR8iZZaGfkscGXasux2L7ia6NqjGBgeIy4mNKejDP6kza1kCtXBcb6PsdJvrGzTDo8UtHfIJiszVwRHa4U4Y2PViX9NtCsccm0U2C8zjCu6dpC7zPwNxP/KKlVpV0xKbTPzBwoNO8onTX/MegE0fDdjBQE1riseyzcVWWFOU32M3GUVnNMl5//vIVhuEX1uXddA==
+sidebar_class_name: "post api-method"
+info_path: docs/dogwalk/api/v1/dog-walk-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Record a walk as completed"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/dogs/{dogId}/walks/{walkId}/complete"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Record a walk as completed
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"dogId","in":"path","required":true,"schema":{"type":"string"}},{"name":"walkId","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Walk recorded as completed","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"id":{"type":"string"},"dogId":{"type":"string"},"scheduledAt":{"type":"string","format":"date-time"},"completedAt":{"type":"string","format":"date-time"},"images":{"type":"array","items":{"type":"string"}}},"title":"Walk"},"meta":{"type":"object"},"errors":{"type":"array","items":{"type":"string"}}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

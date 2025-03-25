@@ -1,6 +1,8 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
+import type * as Plugin from "@docusaurus/types/src/plugin";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -37,6 +39,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          docItemComponent: "@theme/ApiItem",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -79,6 +82,12 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Tutorial',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'dogwalkSidebar',
+          position: 'left',
+          label: 'Dog Walking',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -138,6 +147,32 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  plugins: [
+    [
+      "docusaurus-plugin-openapi-docs",
+      {
+        id: "openapi",
+        docsPluginId: "classic",
+        config: {
+            whiskey: {
+              specPath: "static/contracts/dogwalk/api/v1/dogwalk.oas.1.0.yml",
+              outputDir: "docs/dogwalk/api/v1",
+              downloadUrl:
+                "../../contracts/dogwalk/api/v1/dogwalk.oas.1.0.yml",
+              sidebarOptions: {
+                groupPathsBy: "tag",
+                categoryLinkSource: "tag",
+              },
+          } satisfies OpenApiPlugin.Options,
+        } satisfies Plugin.PluginOptions,
+      },
+    ],
+  ],
+  
+  themes: ["docusaurus-theme-openapi-docs"],
 };
 
-export default config;
+export default async function createConfig() {
+  return config;
+}

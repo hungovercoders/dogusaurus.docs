@@ -1,0 +1,71 @@
+---
+id: remove-images-of-a-walk
+title: "Remove images of a walk"
+description: "Remove images of a walk"
+sidebar_label: "Remove images of a walk"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9lD1v2zAQhv8KcVMLsJZTdNKWNh4MdAiMFB0MD2fxLDOmSIak5BiC/ntxlOy0djoVqBbL5H0+95568BiwoUQhQrnuwWJDUIJy9VKBBG2hBI9pDxICvbQ6kIIyhZYkxGpPDULZQzp5doopaFvDMMhLnCOawz8E2ozGFNNXp05sce1bOZvIJr5C742uMGlni+foLJ/dhHbbZ6oSSPDBeQpJU+Rb3WA9vk12GAKeuO5ETXyvtPxwedE7G0ffz/Mv/KMoVkF7LgRKWObQIlDjOlIitlVFMe5aY06M6sp6lc3EWI9wO4GCGYKEhtLeKZ4NGUrELTDOEgrl6lj0eWRDwdax6EfwQzE1JiFS6M5DboOBEvYp+VgWBXo9U65mj1nlmqK7AwbPCFdv8Bev2HhDv8Nan2lsBh7wzmVOOrEVPLha/ERzEPePS5DAuccO57P57A6u+75/XIqdC6JBi7W2tVCuzp1HgVaJQAYTKYFV0p3mqc1gkOBdTA3mSU+C+zu/P/Jd5pnoNRXeoLYcL4PpJ7Br3gJGV563IdfDB2+yHlFsJOxdTOzT91uM9COYYeDjl5bCCcr1RkKHQeOW4ax7UDryu4JyhybSTXkXXcOH1ST5jwLk+2WfNWtZsR2alv+BhAOdLrvMS/kfk06EBpbGnlBRyG2Pl9/GPJ+eOMSb880Cswwvsn9YfF88LUDCdvoUNE6xV8Ajf1PwOKZ3uZu8jvmsB4O2brFm2zEqP78ANs2wAg==
+sidebar_class_name: "delete api-method"
+info_path: docs/dogwalk/api/v1/dog-walk-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove images of a walk"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/dogs/{dogId}/walks/{walkId}/images"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Remove images of a walk
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"dogId","in":"path","required":true,"schema":{"type":"string"}},{"name":"walkId","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"images":{"type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"204":{"description":"Images removed successfully"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: register-a-new-dog
+title: "Register a new dog"
+description: "Register a new dog"
+sidebar_label: "Register a new dog"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVlDtv2zAQgP8KcTPrR0dt7mPIVCNN0UHwcBYvMmOKZI6UHUPQfy+OsuskMAoU6FINetz7vjtqAKbnnlL+FMwJqqF8WiYDVeaeNDTBZ/JZVBijsw1mG/z8KQUvstTsqEN5y6dIUEHYPlGTQUPkEImzpSRaa17ZpMzWtzBq8NjRTcWWiW672A7bKeZZhcx4Ag02U5duuIyjhmyzE9mXUASjBqYUg09TpI+LpTwMpYZtlAYnW8XU2pSJyajUNw2l9Ng7J9n+EReD+T+jp6GjWzWPGog58N8FH6dpvCV/f6auUHk6KhNaKFl3wUAFMaRCCPMOKpib0CbQkIgPJMnrAXp2UMEu55iq+RyjnZnQHtHtZ03o5ocljBsNMqn76+5/fcEuOrrQvpR4gXz9PrO9Ci5I64toI5z9YygNX9Gpn+j2arW+Aw1S6tTrYraYLeE9gdX6Tj0GVh16bK1vhYGSDpJCbxSTw0xGYZPtwcqWzIS/kOmw7N+56psk36T6PZNML3keHVovoQrC4Qy5hgJ5o2En7KsahmGLiX6wG0cRP/fEJ6jqjYYDssWt9FwLhx2hIS5T2dMJKvg8nZsPD5JVzF1fNuX9GRr1xWPVNBTzH203r9Zj/e37g4zp/D/rghEfxiPocq8ANITSfVnJIhvAoW97bMV2iinXL8TJvoc=
+sidebar_class_name: "post api-method"
+info_path: docs/dogwalk/api/v1/dog-walk-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Register a new dog"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/dogs"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Register a new dog
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string"},"name":{"type":"string"},"breed":{"type":"string"},"images":{"type":"array","items":{"type":"string"}}},"title":"Dog"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Dog registered successfully","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"id":{"type":"string"},"name":{"type":"string"},"breed":{"type":"string"},"images":{"type":"array","items":{"type":"string"}}},"title":"Dog"},"meta":{"type":"object"},"errors":{"type":"array","items":{"type":"string"}}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

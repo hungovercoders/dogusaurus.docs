@@ -1,0 +1,71 @@
+---
+id: get-details-of-a-registered-dog
+title: "Get details of a registered dog"
+description: "Get details of a registered dog"
+sidebar_label: "Get details of a registered dog"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVU8Fu2zAM/RWBpw0Q4nRH3QJ0KHorhg07BDkwFmOrsSWVYrIFhv99oJOmW2Ngmy6WRT3y8elxgIyMPQlxAbceIGJP4MCn5tGDhRDBQUZpwQLTyyEweXDCB7JQ6pZ6BDeAnLKCinCIDYzjRi+XnGKhovFPy6V+PJWaQ5aQNOs9CYaumLQz0pJhakIRYvLGpwYs1CkKRVEg5tyFGhVYPRdFD7fV0/aZagELmVMmlnCu7VH+4VbwM33YixozgS0TzUNCj8055yWEzHhSKYX6MqfWaEGCdHp2n6YcPc1xHi0Qc+L/Sz4t+077BxLj3/THW/V7kjZ5cNDQpJZawEHlU1OqYXLHCBYK8fHVOQfuwEErkourKsxh4VPzA7v9ok59dbwDtUWIuzTRfGvYfMdub1ZPj2BBk50ZLhfLxR285716ejS7xKbHiE2IjZI1WqMYjN4wdSjkDdYSjkHfdqGq5VSkx8k1F3v/vf8/6l5lFfopVe4wRM07dTxctFnrzBSw4M6zs7HQpiIaGIYtFvrG3Tjq8cuB+ARuvbFwRA64VSXWA/hQdO/B7bArdMPhOhDw4ctlFD8asPPcXv0R1R1H7A76Bxb2dLqO97gZLbSEnngicI6t6pqy/Ia6mT59yKs/Hj5/hXH8BYhtcuk=
+sidebar_class_name: "get api-method"
+info_path: docs/dogwalk/api/v1/dog-walk-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get details of a registered dog"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/dogs/{dogId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get details of a registered dog
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"dogId","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Details of the registered dog","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"id":{"type":"string"},"name":{"type":"string"},"breed":{"type":"string"},"images":{"type":"array","items":{"type":"string"}}},"title":"Dog"},"meta":{"type":"object"},"errors":{"type":"array","items":{"type":"string"}}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

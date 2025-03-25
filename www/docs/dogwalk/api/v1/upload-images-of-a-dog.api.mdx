@@ -1,0 +1,71 @@
+---
+id: upload-images-of-a-dog
+title: "Upload images of a dog"
+description: "Upload images of a dog"
+sidebar_label: "Upload images of a dog"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVMtu2zAQ/BViTy3AWEmPvLntxacGbYIeDB/W4lpmwldIyq0h8N+LlWznYQdIdRFtcmdnhrMaIGJCR4VSBrUcwKMjUKBDt9AgwXhQELFsQUKip94k0qBK6klCbrfkENQAZR+5KJdkfAe1rqbDlMvXoPd84m1tG3whX3jL9baYiKk0m5DclcYyYp6hh/UDtQUkxBQipWIo865x2E2rwzlMCfdMvZDL5+wkcBssoGBtPKY91OlhzjkGnye0L9c3/NKU22RiMYGdWIzNRB9tQE1a5L5tKedNby23fKEKY7SmRa5rHjIXf1zS0YKPCWLmjsoF3CqBUgrpP9ypJzNeC78fFYvJbBE2AoUObKajsg2aQxLyqISzoqDRocvNMMaoNoc7kpAp7Y5J65MFBdtSYlZNg9HMdOj+oH2ctcE1uxvgGBm/CSNLUyzT/B468Rvto5jfLkACg00Er2fXsxt4S3t+uxCbkIRDj53xHZMW3CML9FokslhIC2yL2Rm2f8amsRSH45UdxuFd+a/ancws9Lc00aLxDDcKHQ7OLHm02Ap1GrHJnJWELVuoljAMa8x0n2yt/PdTT2kParmSsMNkcM1OLAfQJvNag9qgzXRG5pRG+PTzMH6fBcjLJI/x8ByOHdqef4GER9qfPgd1VSVsCTWlkcC0921qc3XHCM+1l8a6ymPRvG0plhfHz+aFb/8Urtsfv+5AwvrwNXFBcw0Dj7jyeamWq1rrP9sQpuQ=
+sidebar_class_name: "post api-method"
+info_path: docs/dogwalk/api/v1/dog-walk-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Upload images of a dog"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/dogs/{dogId}/images"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Upload images of a dog
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"dogId","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"multipart/form-data":{"schema":{"type":"object","properties":{"images":{"type":"array","items":{"type":"string","format":"binary"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Images uploaded successfully","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"string"}},"meta":{"type":"object"},"errors":{"type":"array","items":{"type":"string"}}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: upload-images-of-a-walk
+title: "Upload images of a walk"
+description: "Upload images of a walk"
+sidebar_label: "Upload images of a walk"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VLFu2zAQ/RXiphZgrKQjt7RdPDVoE3QwPJzFs8yEIhmScmsI/PfiKNlJ4xRIUaBeLIm8d+89vuMIASP2lCkmUKsRHPYECrTvlhokGAcKAuYdSIj0OJhIGlSOA0lI7Y56BDVCPgQuSjka10Ep8oTzA+3DPwCtp82U8kevD7zjZW3rXSaXeakfbDYBY262PvYXGnPFPEP3m3tqM0gI0QeK2VDiVdNjNz3N+zBGPDD1TH06ZyeB22AGBRvjMB6gTD/mnIJ3aUL7cHnFf5pSG03IxrMTy9pMDMF61KRFGtqWUtoO1nLLZ6owBGta5LrmPnHx2yUdLXibIGbeU34Ft0igGH38C3fKyYzfhd9VxWIyW/itQMEZgdp65zWnxKcqhcOioNG+S81YA1ka3puacYpVaeYzk5Ao7o8RHqIFBbucQ1JNg8EstO+4YtH6vtlfAcfKuK2vrE22TPuz78R3tA/i+mYJEhhsIny5uFxcwUsZ1zdLsfVR9OiwM64T2ndVSBLotIhkMZMW2GazN3wcCzaRlfVYj3Cejz/b8Vu/k7uZfuYmWDSO8arScXZqxUPLXqjj8FY+/OFpCie/1hJ2bLJawThuMNFdtKXw58eB4gHUai1hj9Hghs1ZjaBN4mcNaos20Rm9U2Dh3dd5Qt8LkK/TPibIcX72aAd+AwkPdDhdPXyH/Mems0NlXSTsCDXFKnta/DT1ubhliKfi1+4bpj0VXbcthfxs+9kgcwxPob/58u0WJGzma673mmsYuOLKp0e1WpdSfgFq0fJw
+sidebar_class_name: "post api-method"
+info_path: docs/dogwalk/api/v1/dog-walk-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Upload images of a walk"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/dogs/{dogId}/walks/{walkId}/images"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Upload images of a walk
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"dogId","in":"path","required":true,"schema":{"type":"string"}},{"name":"walkId","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"multipart/form-data":{"schema":{"type":"object","properties":{"images":{"type":"array","items":{"type":"string","format":"binary"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Images uploaded successfully","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"string"}},"meta":{"type":"object"},"errors":{"type":"array","items":{"type":"string"}}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

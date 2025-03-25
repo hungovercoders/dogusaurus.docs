@@ -1,0 +1,71 @@
+---
+id: get-details-of-a-scheduled-walk
+title: "Get details of a scheduled walk"
+description: "Get details of a scheduled walk"
+sidebar_label: "Get details of a scheduled walk"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VMFu2zAM/RWBpw3Q4nRH3wJ0KHorhg07BDkwFmOrlSxVorMFhv59oONkWxOgKwbMF9si+Ug+PmqEiAk9MaUM9XqEHj1BDSa09wY02B5qiMgdaEj0PNhEBmpOA2nITUceoR6BD1GCMifbt1CKPuN8R/f0D0Abcc4x9Jmy2D8ul/IylJtkI9sgqLfEaF1WYae4IyVoZnBklCQHDU3omXqWQIzR2QYlsHrMEj1eZg/bR2oYNMQUIiW2x9wG+S+8rLnSh575vGY5l7viS7uGXUgeWSaCTB/YepKgJvjoiN8WZD22xyJnf0wJDzIbJp+v0V80sGUnZ9+Ey6LB0zUWigZKKaS3oU+PfjHNO2Jlfk0UL+fpibtgoIaWJv5FVDVUJrS5GieiSyWuuRqP8iugIVPanzQ+JAc1dMwx11WF0S5MaMV10QRf7W9AdGf7XZiqngm4Da0SEtTq4R40CNix4OViubiBl22sHu7VLiTlscfW9q0yoZ0ayAp7oxI5ZDIKG7Z7K+JZCIkxZPY4yXJeoNfp+CPvmWWmH1xFh7YX3KnjcaZqLWrMoKE+bflUlxzM67rR0IXM4jqOW8z0NblS5Ph5oHSAer3RsMdkcSvcrEcwNsu3gXqHLtNFVecdhHef5+1/r0Bfr/YkoF7ks0c3yB9oeKLD+WqSO+Y/Jp2JKZuioSM0lKa2j8ZV01Dk38IurhkR1Fm2d5++QCk/AQ2Q2aM=
+sidebar_class_name: "get api-method"
+info_path: docs/dogwalk/api/v1/dog-walk-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get details of a scheduled walk"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/dogs/{dogId}/walks/{walkId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get details of a scheduled walk
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"dogId","in":"path","required":true,"schema":{"type":"string"}},{"name":"walkId","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Details of the scheduled walk","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"id":{"type":"string"},"dogId":{"type":"string"},"scheduledAt":{"type":"string","format":"date-time"},"completedAt":{"type":"string","format":"date-time"},"images":{"type":"array","items":{"type":"string"}}},"title":"Walk"},"meta":{"type":"object"},"errors":{"type":"array","items":{"type":"string"}}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

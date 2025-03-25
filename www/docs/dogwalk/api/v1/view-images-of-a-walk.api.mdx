@@ -1,0 +1,71 @@
+---
+id: view-images-of-a-walk
+title: "View images of a walk"
+description: "View images of a walk"
+sidebar_label: "View images of a walk"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9U02L2zAQ/StiTi2IONujboGWEuhhKf04hBwm1sTWxpa00iTbYPTfy9hJmm7SQynUF+tr3sx782aAiAl7YkoZzGoAjz2BARuapQUNzoOBiNyChkTPe5fIguG0Jw25bqlHMAPwMUpQ5uR8A6XoC84Ldrt/AFrL4xyDz5Tl/t18Lj9LuU4usguC+sllVmGrXI8NZVlxS0oyg4Y6eCbPEoUxdq5GiaqesoQOt6nD5olqBg0xhUiJ3ZTYIl+/wpTwKKyY+nxXAeiJ7+AWDZRSSPlvwKZPv6L9zdHLFWc8M+6J22DBQEMjD9HcQGVDk6th7Gup5Gmuhqk7pZpQQEOmdDg7YZ86MNAyx2yqCqOb2dBIxKwOfXV4AOmO89swluy4k5rfh0Z9x26nFo9L0CBgU7Xz2Xz2AK85LB6XahuS6tFj43yjbGhGHlmhtypRh0xWYc3u4KQXM1Ewhsw9jv072exPWvyW7SIs0w+uYofOC9rIczjptBLnixLmPAFjNXLwy8qTWmsNbcgsMcOwwUxfU1eKHD/vKR3BrNYaDpgcbkSa1QDWZVlbMFvsMt2Ud/EqvPl8GpG3CvT9ss/m8WKdA3Z72YGGHR0v8yuD+B+TnhQq66KhJbSURtrT5aKuKfJV2M04ip8u5v344QuU8hNrTI5b
+sidebar_class_name: "get api-method"
+info_path: docs/dogwalk/api/v1/dog-walk-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"View images of a walk"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/dogs/{dogId}/walks/{walkId}/images"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+View images of a walk
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"dogId","in":"path","required":true,"schema":{"type":"string"}},{"name":"walkId","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of images of the walk","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"string"}},"meta":{"type":"object"},"errors":{"type":"array","items":{"type":"string"}}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

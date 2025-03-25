@@ -1,0 +1,71 @@
+---
+id: unschedule-a-walk
+title: "Unschedule a walk"
+description: "Unschedule a walk"
+sidebar_label: "Unschedule a walk"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9UsGK2zAU/BUxpxZEnC096bawOQR6WEqXHkIOWuvFEZElr56cNhj9e3mON7TbvRV6sv00njczmgmDzbanQplhdhOi7QkGLnVbBw0fYTDYcoRGppfRZ3IwJY+kwe2RegszoVwG+YlL9rFDrfrG88OG0z8Q7QXMQ4pMLOef1p/l4Yjb7Ifik7B+t+GkxigsbgzkFI9tS8yHMYSLqHmDf7pBlVUiEBo9lWNyYpwCFYK+ajVoXOq4meY8aiNobqarqwoNpnx+jW7MAQbHUgY2TWMHv3KpE+iqTX1zvoPY8fGQZqe+BLH6kDo1G7h/3EJDyK4q16v16g5vtd8/btUhZdXbaDsfO+VSN3tgZaNTmYIt5JRtiz/74olXqBpD4tLbKHuXe3kvgz823e6i0M/SDMH6KEyzx2kJZyc1YWiY17rMSmSw3Pte45i4CHSani3TUw61yvhlpHyB2e01zjZ7+yxp7CY4z/LuYA42MP2lqk2xUCww+PB1qdFHBf2+2mVo40WitWGUL2ic6HLruJT1Py5dgqn7+lvpHjZfNt82qPUX3mAyTA==
+sidebar_class_name: "delete api-method"
+info_path: docs/dogwalk/api/v1/dog-walk-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Unschedule a walk"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/dogs/{dogId}/walks/{walkId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Unschedule a walk
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"dogId","in":"path","required":true,"schema":{"type":"string"}},{"name":"walkId","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"204":{"description":"Walk unscheduled successfully"}}}
+>
+  
+</StatusCodes>
+
+
+      

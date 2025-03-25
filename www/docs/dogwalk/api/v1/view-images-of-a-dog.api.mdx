@@ -1,0 +1,71 @@
+---
+id: view-images-of-a-dog
+title: "View images of a dog"
+description: "View images of a dog"
+sidebar_label: "View images of a dog"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVU02P2jAQ/SvWnFrJImyPviG1qpB6WFX9OCAOQzwkXhLbOx7Yoij/vZrAIrqwh+YSJ/abee/N8wAZGXsS4gJuNUDEnsCBT83Sg4UQwUFGacEC0/M+MHlwwnuyUOqWegQ3gByzgopwiA2M41oPl5xioaL7n+ZzfXkqNYcsIWnVb6GISVsTemyo6EpaMj41YKFOUSiKgjDnLtSooOqpKHK47Zw2T1QLWMicMrGEU1+Pcn0KmfGoooT6co+3hZ7kTt3RAjEnLv9T7PTYN6p/BXq5koxnwT1Jmzw4aGiSoY47qHxqSjVMwxirEwosFOLD67z23IGDViQXV1WYw8yn5gW73axOfXV4AB1GiNs0UQzSKcfPqTG/sduZxeMSLGixE7v5bD57gLecF49Ls01seozYhNgoZ6M9isHoDVOHQt5gLeEQ1PuZOpZTkR6neZ1D9Y72f5pdfBT6I1XuMEQtNskczr6sNJ5qhLvE9GTN2kKbiuiJYdhgoZ/cjaP+ft4TH8Gt1hYOyAE36sNqAB+Krj24LXaFbshcgggfvp/j/9GAvU/yNRlRc3HAbq9fYGFHx8uVGtejhZbQE08ETnuLuqYsV6ib1OsYLyH5+uUHjONfY7BCWg==
+sidebar_class_name: "get api-method"
+info_path: docs/dogwalk/api/v1/dog-walk-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"View images of a dog"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/dogs/{dogId}/images"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+View images of a dog
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"dogId","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of images of the dog","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"string"}},"meta":{"type":"object"},"errors":{"type":"array","items":{"type":"string"}}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      
