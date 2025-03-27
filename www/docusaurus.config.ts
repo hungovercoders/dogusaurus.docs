@@ -164,6 +164,9 @@ const config: Config = {
   } satisfies Preset.ThemeConfig,
 
   plugins: [
+    [ require.resolve('docusaurus-lunr-search'), {
+      languages: ['en'] // language codes
+    }],
     [
       "docusaurus-plugin-openapi-docs",
       {
